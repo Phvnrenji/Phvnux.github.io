@@ -1,0 +1,14 @@
+1、新建并切换到分支：git checkout -b branch_01
+   相当于执行了两条指令：新建分支和切换到该分支：git branch branch_01 
+						 git checkout branch_01
+2、创建新分支的指针：vim index.html
+		     git commit -a -m 'added a new footer [branch_01]'
+
+3、合并分支：git checkout master 
+	     git merge branch_01
+
+
+
+
+修复分支冲突：git mergetool
+		
