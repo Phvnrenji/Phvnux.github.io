@@ -67,7 +67,7 @@
 访问 Github注册
 注册好之后，在网页上直接创建一个新的repository，name与用户名一致，如Phvnux.github.io
 创建好之后，便拥">
-<meta property="og:updated_time" content="2015-10-07T13:27:56.554Z">
+<meta property="og:updated_time" content="2015-10-07T13:49:57.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Start博客建立记录主要参考@wsgzao和@CnFeat的教程
@@ -303,7 +303,7 @@
 <h4 id="本地查看调试">本地查看调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
 <h4 id="同步到Github">同步到Github</h4><p>将根文件夹下<code>generate</code>生成的<code>public</code>文件夹下的内容加入repository中，即在Github网页中创建的第一个仓库，替换掉原来的<code>index.html</code>等文件</p>
 <p>具体操作如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> f:/Dvnean/Github/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/Phvnux/Phvnux.github.io.git</span><br><span class="line">$ git branch branchOne    <span class="comment">#可不用创建分支</span></span><br><span class="line">$ git checkout branchOne</span><br><span class="line">$ git add &lt;files&gt; <span class="comment">#&lt;files&gt;为public中移植过来的文件</span></span><br><span class="line">$ git commit -m <span class="string">'备注'</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge branchOne</span><br><span class="line">$ git branch <span class="operator">-d</span> branchOne </span><br><span class="line">$ git push origin master   <span class="comment">#同步远程版本库</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> f:/Dvnean/Github/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/Phvnux/Phvnux.github.io.git</span><br><span class="line">$ git branch branchOne    <span class="comment">#可不用创建分支</span></span><br><span class="line">$ git checkout branchOne</span><br><span class="line">$ git add &lt;files&gt; </span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line"><span class="comment">#&lt;files&gt;为public中移植过来的文件</span></span><br><span class="line"><span class="comment">#具体提交哪些文件可用命令*git status*查看有变动的文件 </span></span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line">$ git commit -m <span class="string">'备注'</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge branchOne</span><br><span class="line">$ git branch <span class="operator">-d</span> branchOne </span><br><span class="line">$ git push origin master   <span class="comment">#同步远程版本库</span></span><br></pre></td></tr></table></figure>
 <p><code>commit</code>之后原来的博客界面就变成刚刚设置的主题的样式了</p>
 <h2 id=""> <br></h2><p>待续…</p>
 </span>
@@ -335,6 +335,25 @@
 
 
     <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/10/06/hello-world/"
+     data-title="Hello World"
+     data-content=""
+     data-url="http://Phvnux.github.io/2015/10/06/hello-world/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
       
     </div>
   </div>
