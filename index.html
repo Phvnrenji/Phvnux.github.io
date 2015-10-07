@@ -3,103 +3,16 @@
 <head>
   
 
-<<<<<<< HEAD
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-=======
-    
-    <meta name="description" content="博客小站 学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fan's blog station">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Fan's blog station">
-<meta property="og:description" content="博客小站 学习笔记">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fan's blog station">
-<meta name="twitter:description" content="博客小站 学习笔记">
->>>>>>> origin/master
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<<<<<<< HEAD
-=======
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/10/06/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Phvn" target="_blank" itemprop="author">Phvn</a>
-		
-  <p class="article-time">
-    <time datetime="2015-10-05T15:00:00.000Z" itemprop="datePublished"> 发表于 2015-10-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h4 id="我的个人博客建立记录">我的个人博客建立记录</h4><h4 id="主要参考@wsgzao和@CnFeat的教程">主要参考<a href="http://wsgzao.github.io/post/hexo-jacman/" target="_blank" rel="external">@wsgzao</a>和<a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">@CnFeat</a>的教程</h4><p><br></p>
-<h3 id="准备工作">准备工作</h3><hr>
-<ol>
-<li>安装Node.js</li>
-<li>安装Git</li>
-</ol>
-<p>由于网络原因<a href="http://github-for-windows.en.softonic.com/" target="_blank" rel="external">Github for Windows</a>一直安装失败，所以我改用<a href="http://babun.github.io/" target="_blank" rel="external">Babun</a>来代替git shell</p>
-<h3 id="创建Github账户">创建Github账户</h3><hr>
-<p>访问 <a href="http://github.com" target="_blank" rel="external">Github</a>注册</p>
-<p>注册好之后，在网页上直接创建一个新的repository，name与用户名一致，如<em>Phvnux.github.io</em></p>
-<p>创建好之后，便拥有了一个免费的静态主页<em><a href="http://phvnux.github.io" target="_blank" rel="external">http://phvnux.github.io</a></em></p>
-<h3 id="链接到Github">链接到Github</h3><hr>
-<p>Git会根据用户的名字和邮箱来做权限的处理，在babun中输入下面的命令进行个人git信息的设置，其中<em>username</em>和<em>email</em>为注册Github账户时的用户名和邮箱</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>   </span><br><span class="line">$ git config --global user.email <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
-<p>设置完之后可以通过下面的命令来查看</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br></pre></td></tr></table></figure>
-<h3 id="安装Hexo">安装Hexo</h3><hr>
-<p>在babun的家目录上建一个文件夹<em>Hexo</em>，进入该文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir Hexo</span><br><span class="line">$ <span class="built_in">cd</span> Hexo/</span><br><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo --save</span><br></pre></td></tr></table></figure>
-<h4 id="初始化配置">初始化配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line"></span><br><span class="line"><span class="comment">#或者执行以下命令在指定文件夹新建所需要的文件</span></span><br><span class="line"></span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment">#初始化完成后，该指定文件夹的目录如下</span></span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|      ├── _drafts</span><br><span class="line">|      └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<h4 id="安装Hexo插件">安装Hexo插件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-archive --save</span><br><span class="line">$ npm install hexo-generator-category --save</span><br><span class="line">$ npm install hexo-generator-tag --save</span><br><span class="line">$ npm install hexo-server --save</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ npm install hexo-deployer-heroku --save</span><br><span class="line">$ npm install hexo-deployer-rsync --save</span><br><span class="line">$ npm install hexo-deployer-openshift --save</span><br><span class="line">$ npm install hexo-renderer-marked@<span class="number">0.2</span> --save</span><br><span class="line">$ npm install hexo-renderer-stylus@<span class="number">0.2</span> --save</span><br><span class="line">$ npm install hexo-generator-feed@<span class="number">1</span> --save</span><br><span class="line">$ npm install hexo-generator-sitemap@<span class="number">1</span> --save</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a><br><br></p>
-<h4 id="本地查看效果">本地查看效果</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
-<p>在浏览器中输入<code>localhost:4000</code>查看静态网页</p>
-<h3 id="主题">主题</h3><p>使用以下命令来复制pacman主题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span>  https://github.com/wuchong/jacman.git themes/jacman</span><br></pre></td></tr></table></figure>
-<h4 id="启用该主题">启用该主题</h4><p>修改Hexo文件夹或者你的博客根目录下的<code>_config.yml</code>全局配置文件中的theme属性，将其设置为jacman。同时建议设置stylus属性中的compress值为true，会自动压缩 CSS 文件，hexo默认配置中不包含这一项，建议开启</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">theme:</span> jacman</span><br><span class="line"><span class="string">stylus:</span></span><br><span class="line"><span class="label">  compress:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h4 id="更新">更新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/jacman</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
-<p>配置<code>_config.yml</code>文件时，建议先备份</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp _config.yml _config.yml_bak</span><br></pre></td></tr></table></figure>
-<h4 id="更多主题">更多主题</h4><p><a href="https://hexo.io/themes/" target="_blank" rel="external">Themes</a></p>
-<h3 id="部署新的静态网页到Github">部署新的静态网页到Github</h3><hr>
-<p>配置<code>_config.yml</code>文件</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line"><span class="attribute">type</span>: github</span><br><span class="line"><span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:Phvnux/Phvnux.github.com.git</span><br><span class="line"><span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-<h4 id="部署">部署</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<h4 id="本地查看调试">本地查看调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
-<h4 id="同步到Github">同步到Github</h4><p>将根文件夹下<code>generate</code>生成的<code>public</code>文件夹下的内容加入repository中，即在Github网页中创建的第一个仓库，替换掉原来的<code>index.html</code>等文件</p>
-<p>具体操作如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> f:/Dvnean/Github/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/Phvnux/Phvnux.github.io.git</span><br><span class="line">$ git branch branchOne    <span class="comment">#可不用创建分支，逗逼癌发作</span></span><br><span class="line">$ git checkout branchOne</span><br><span class="line">$ git add &lt;files&gt; <span class="comment">#&lt;files&gt;为public中移植过来的文件</span></span><br><span class="line">$ git commit -m <span class="string">'备注'</span></span><br><span class="line">$ git push</span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge branchOne</span><br></pre></td></tr></table></figure>
-<p><code>commit</code>之后原来的博客界面就变成刚刚设置的主题的样式了</p>
-<h2 id=""> <br></h2><p>待续…</p>
->>>>>>> origin/master
 
 
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/git/">git</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Github/">Github</a><a href="/tags/babun/">babun</a><a href="/tags/hexo/">hexo</a><a href="/tags/start/">start</a>
-  </div>
 
 
 
@@ -232,7 +145,6 @@
   
 
   
-<<<<<<< HEAD
     <div class="site-search">
       
   
@@ -249,51 +161,12 @@
 
   _st('install', 'zZsWbJSL6-U7qotrd8Eb','2.0.0');
 </script>
-=======
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-		  
-			<li><a href="/categories/git/" title="git">git<sup>1</sup></a></li>
-		  
-		
-		</ul>
-</div>
-
->>>>>>> origin/master
 
 
 
     </div>
   
-<<<<<<< HEAD
 </nav>
-=======
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/start/" title="start">start<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Github/" title="Github">Github<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/babun/" title="babun">babun<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
->>>>>>> origin/master
 
  </div>
     </header>
