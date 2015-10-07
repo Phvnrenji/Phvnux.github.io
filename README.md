@@ -1,2 +1,8 @@
-# Phvnux.github.io
-Phvn's Linux Learning
+
+## 博客地址:
+[Phvnux.github.io](http://phvnux.github.io/)
+
+## Email
+**Dvnean@gmail.com**
+
+
