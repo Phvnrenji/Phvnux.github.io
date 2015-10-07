@@ -3,9 +3,15 @@
   <title><![CDATA[Phvn's Notes]]></title>
   <subtitle><![CDATA[Dvnean]]></subtitle>
   <link href="/atom.xml" rel="self"/>
+<<<<<<< HEAD
   <link href="http://Phvnux.github.io/"/>
   <updated>2015-10-07T06:44:36.904Z</updated>
   <id>http://Phvnux.github.io/</id>
+=======
+  <link href="http://yoursite.com/"/>
+  <updated>2015-10-06T13:05:34.968Z</updated>
+  <id>http://yoursite.com/</id>
+>>>>>>> origin/master
   
   <author>
     <name><![CDATA[Dvnean]]></name>
@@ -16,11 +22,19 @@
   
   <entry>
     <title><![CDATA[Hello World]]></title>
+<<<<<<< HEAD
     <link href="http://Phvnux.github.io/2015/10/06/hello-world/"/>
     <id>http://Phvnux.github.io/2015/10/06/hello-world/</id>
     <published>2015-10-05T15:00:00.000Z</published>
     <updated>2015-10-07T06:44:36.904Z</updated>
     <content type="html"><![CDATA[<h5 id="Start">Start</h5><h5 id="博客建立记录">博客建立记录</h5><h5 id="主要参考@wsgzao和@CnFeat的教程">主要参考<a href="http://wsgzao.github.io/post/hexo-jacman/" target="_blank" rel="external">@wsgzao</a>和<a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">@CnFeat</a>的教程</h5><p><br></p>
+=======
+    <link href="http://yoursite.com/2015/10/06/hello-world/"/>
+    <id>http://yoursite.com/2015/10/06/hello-world/</id>
+    <published>2015-10-05T15:00:00.000Z</published>
+    <updated>2015-10-06T13:05:34.968Z</updated>
+    <content type="html"><![CDATA[<h4 id="我的个人博客建立记录">我的个人博客建立记录</h4><h4 id="主要参考@wsgzao和@CnFeat的教程">主要参考<a href="http://wsgzao.github.io/post/hexo-jacman/" target="_blank" rel="external">@wsgzao</a>和<a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">@CnFeat</a>的教程</h4><p><br></p>
+>>>>>>> origin/master
 <h3 id="准备工作">准备工作</h3><hr>
 <ol>
 <li>安装Node.js</li>
@@ -30,7 +44,11 @@
 <h3 id="创建Github账户">创建Github账户</h3><hr>
 <p>访问 <a href="http://github.com" target="_blank" rel="external">Github</a>注册</p>
 <p>注册好之后，在网页上直接创建一个新的repository，name与用户名一致，如<em>Phvnux.github.io</em></p>
+<<<<<<< HEAD
 <p>创建好之后，便拥有了一个免费的静态主页<em><a href="http://phvnux.github.io">http://phvnux.github.io</a></em></p>
+=======
+<p>创建好之后，便拥有了一个免费的静态主页<em><a href="http://phvnux.github.io" target="_blank" rel="external">http://phvnux.github.io</a></em></p>
+>>>>>>> origin/master
 <h3 id="链接到Github">链接到Github</h3><hr>
 <p>Git会根据用户的名字和邮箱来做权限的处理，在babun中输入下面的命令进行个人git信息的设置，其中<em>username</em>和<em>email</em>为注册Github账户时的用户名和邮箱</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>   </span><br><span class="line">$ git config --global user.email <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
@@ -47,6 +65,7 @@
 <h3 id="主题">主题</h3><p>使用以下命令来复制pacman主题</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span>  https://github.com/wuchong/jacman.git themes/jacman</span><br></pre></td></tr></table></figure>
 <h4 id="启用该主题">启用该主题</h4><p>修改Hexo文件夹或者你的博客根目录下的<code>_config.yml</code>全局配置文件中的theme属性，将其设置为jacman。同时建议设置stylus属性中的compress值为true，会自动压缩 CSS 文件，hexo默认配置中不包含这一项，建议开启</p>
+<<<<<<< HEAD
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: jacman&#10;stylus:&#10;  compress: true</span><br></pre></td></tr></table></figure>
 <h4 id="更新">更新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/jacman</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
 <p>配置<code>_config.yml</code>文件时，建议先备份</p>
@@ -55,6 +74,16 @@
 <h3 id="部署新的静态网页到Github">部署新的静态网页到Github</h3><hr>
 <p>配置<code>_config.yml</code>文件</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:&#10;type: github&#10;repository: git@github.com:Phvnux/Phvnux.github.com.git&#10;branch: master</span><br></pre></td></tr></table></figure>
+=======
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">theme:</span> jacman</span><br><span class="line"><span class="string">stylus:</span></span><br><span class="line"><span class="label">  compress:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h4 id="更新">更新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/jacman</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+<p>配置<code>_config.yml</code>文件时，建议先备份</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp _config.yml _config.yml_bak</span><br></pre></td></tr></table></figure>
+<h4 id="更多主题">更多主题</h4><p><a href="https://hexo.io/themes/" target="_blank" rel="external">Themes</a></p>
+<h3 id="部署新的静态网页到Github">部署新的静态网页到Github</h3><hr>
+<p>配置<code>_config.yml</code>文件</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line"><span class="attribute">type</span>: github</span><br><span class="line"><span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:Phvnux/Phvnux.github.com.git</span><br><span class="line"><span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+>>>>>>> origin/master
 <h4 id="部署">部署</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <h4 id="本地查看调试">本地查看调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
 <h4 id="同步到Github">同步到Github</h4><p>将根文件夹下<code>generate</code>生成的<code>public</code>文件夹下的内容加入repository中，即在Github网页中创建的第一个仓库，替换掉原来的<code>index.html</code>等文件</p>
@@ -64,6 +93,7 @@
 <h2 id=""> <br></h2><p>待续…</p>
 ]]></content>
     <summary type="html">
+<<<<<<< HEAD
     <![CDATA[<h5 id="Start">Start</h5><h5 id="博客建立记录">博客建立记录</h5><h5 id="主要参考@wsgzao和@CnFeat的教程">主要参考<a href="http://wsgzao.github.io/post/hexo-jacman/" ]]>
     </summary>
     
@@ -76,6 +106,20 @@
       <category term="start" scheme="http://Phvnux.github.io/tags/start/"/>
     
       <category term="git" scheme="http://Phvnux.github.io/categories/git/"/>
+=======
+    <![CDATA[<h4 id="我的个人博客建立记录">我的个人博客建立记录</h4><h4 id="主要参考@wsgzao和@CnFeat的教程">主要参考<a href="http://wsgzao.github.io/post/hexo-jacman/" target="_blank" r]]>
+    </summary>
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+      <category term="babun" scheme="http://yoursite.com/tags/babun/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="start" scheme="http://yoursite.com/tags/start/"/>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+>>>>>>> origin/master
     
   </entry>
   
