@@ -67,7 +67,7 @@
 访问 Github注册
 注册好之后，在网页上直接创建一个新的repository，name与用户名一致，如Phvnux.github.io
 创建好之后，便拥">
-<meta property="og:updated_time" content="2015-10-07T13:49:57.041Z">
+<meta property="og:updated_time" content="2015-10-08T04:58:43.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Start博客建立记录主要参考@wsgzao和@CnFeat的教程
@@ -282,17 +282,17 @@
 <h3 id="链接到Github">链接到Github</h3><hr>
 <p>Git会根据用户的名字和邮箱来做权限的处理，在babun中输入下面的命令进行个人git信息的设置，其中<em>username</em>和<em>email</em>为注册Github账户时的用户名和邮箱</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>   </span><br><span class="line">$ git config --global user.email <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>设置完之后可以通过下面的命令来查看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br></pre></td></tr></table></figure>
 <h3 id="安装Hexo">安装Hexo</h3><hr>
-<p>在babun的家目录上建一个文件夹<em>Hexo</em>，进入该文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir Hexo</span><br><span class="line">$ <span class="built_in">cd</span> Hexo/</span><br><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo --save</span><br></pre></td></tr></table></figure>
-<h4 id="初始化配置">初始化配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line"></span><br><span class="line"><span class="comment">#或者执行以下命令在指定文件夹新建所需要的文件</span></span><br><span class="line"></span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment">#初始化完成后，该指定文件夹的目录如下</span></span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|      ├── _drafts</span><br><span class="line">|      └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> </span><br><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo --save</span><br></pre></td></tr></table></figure>
+<h4 id="初始化blog文件夹">初始化blog文件夹</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir &lt;folder&gt;</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line"></span><br><span class="line"><span class="comment">#初始化完成后，该指定文件夹的目录如下</span></span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|      ├── _drafts</span><br><span class="line">|      └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
 <h4 id="安装Hexo插件">安装Hexo插件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-archive --save</span><br><span class="line">$ npm install hexo-generator-category --save</span><br><span class="line">$ npm install hexo-generator-tag --save</span><br><span class="line">$ npm install hexo-server --save</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ npm install hexo-deployer-heroku --save</span><br><span class="line">$ npm install hexo-deployer-rsync --save</span><br><span class="line">$ npm install hexo-deployer-openshift --save</span><br><span class="line">$ npm install hexo-renderer-marked@<span class="number">0.2</span> --save</span><br><span class="line">$ npm install hexo-renderer-stylus@<span class="number">0.2</span> --save</span><br><span class="line">$ npm install hexo-generator-feed@<span class="number">1</span> --save</span><br><span class="line">$ npm install hexo-generator-sitemap@<span class="number">1</span> --save</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a><br><br></p>
+<p><br><br>More info: <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a><br><br></p>
 <h4 id="本地查看效果">本地查看效果</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
-<p>在浏览器中输入<code>localhost:4000</code>查看静态网页</p>
-<h3 id="主题">主题</h3><p>使用以下命令来复制pacman主题</p>
+<p>在浏览器中输入<code>localhost:4000</code>查看静态网页<!--more--></p>
+<h3 id="主题">主题</h3><p>使用以下命令来复制jacman主题</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span>  https://github.com/wuchong/jacman.git themes/jacman</span><br></pre></td></tr></table></figure>
 <h4 id="启用该主题">启用该主题</h4><p>修改Hexo文件夹或者你的博客根目录下的<code>_config.yml</code>全局配置文件中的theme属性，将其设置为jacman。同时建议设置stylus属性中的compress值为true，会自动压缩 CSS 文件，hexo默认配置中不包含这一项，建议开启</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">theme:</span> jacman</span><br><span class="line"><span class="string">stylus:</span></span><br><span class="line"><span class="label">  compress:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
@@ -301,10 +301,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp _config.yml _config.yml_bak</span><br></pre></td></tr></table></figure>
 <h4 id="更多主题">更多主题</h4><p><a href="https://hexo.io/themes/" target="_blank" rel="external">Themes</a><br><a href="http://notes.iissnan.com/" target="_blank" rel="external">Next</a><br><a href="http://litten.github.io/" target="_blank" rel="external">Litten</a></p>
 <h4 id="本地查看调试">本地查看调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
-<h4 id="同步到Github">同步到Github</h4><p>将根文件夹下<code>generate</code>生成的<code>public</code>文件夹下的内容加入repository中，即在Github网页中创建的第一个仓库，替换掉原来的<code>index.html</code>等文件</p>
+<h4 id="同步到Github<!-more->">同步到Github<!--more--></h4><p>将根文件夹下<code>generate</code>生成的<code>public</code>文件夹下的内容加入repository中，即在Github网页中创建的第一个仓库，替换掉原来的<code>index.html</code>等文件</p>
 <p>具体操作如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> f:/Dvnean/Github/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/Phvnux/Phvnux.github.io.git</span><br><span class="line">$ git branch branchOne    <span class="comment">#可不用创建分支</span></span><br><span class="line">$ git checkout branchOne</span><br><span class="line">$ git add &lt;files&gt; </span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line"><span class="comment">#&lt;files&gt;为public中移植过来的文件</span></span><br><span class="line"><span class="comment">#具体提交哪些文件可用命令*git status*查看有变动的文件 </span></span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line">$ git commit -m <span class="string">'备注'</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge branchOne</span><br><span class="line">$ git branch <span class="operator">-d</span> branchOne </span><br><span class="line">$ git push origin master   <span class="comment">#同步远程版本库</span></span><br></pre></td></tr></table></figure>
-<p><code>commit</code>之后原来的博客界面就变成刚刚设置的主题的样式了</p>
+<p><code>push</code>之后原来的博客界面就变成刚刚设置的主题的样式了<!--more--></p>
 <h2 id=""> <br></h2><p>待续…</p>
 </span>
       
@@ -325,6 +325,18 @@
         </div>
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/08/pictureTest/" rel="prev">PicInHarbin</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -406,21 +418,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -471,7 +483,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Start"><span class="nav-number">1.</span> <span class="nav-text">Start</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博客建立记录"><span class="nav-number">2.</span> <span class="nav-text">博客建立记录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主要参考@wsgzao和@CnFeat的教程"><span class="nav-number">3.</span> <span class="nav-text">主要参考@wsgzao和@CnFeat的教程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number"></span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Github账户"><span class="nav-number"></span> <span class="nav-text">创建Github账户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接到Github"><span class="nav-number"></span> <span class="nav-text">链接到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number"></span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化配置"><span class="nav-number"></span> <span class="nav-text">初始化配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo插件"><span class="nav-number"></span> <span class="nav-text">安装Hexo插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看效果"><span class="nav-number"></span> <span class="nav-text">本地查看效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number"></span> <span class="nav-text">主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启用该主题"><span class="nav-number"></span> <span class="nav-text">启用该主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新"><span class="nav-number"></span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多主题"><span class="nav-number"></span> <span class="nav-text">更多主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看调试"><span class="nav-number"></span> <span class="nav-text">本地查看调试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同步到Github"><span class="nav-number"></span> <span class="nav-text">同步到Github</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"> </span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Start"><span class="nav-number">1.</span> <span class="nav-text">Start</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博客建立记录"><span class="nav-number">2.</span> <span class="nav-text">博客建立记录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主要参考@wsgzao和@CnFeat的教程"><span class="nav-number">3.</span> <span class="nav-text">主要参考@wsgzao和@CnFeat的教程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number"></span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Github账户"><span class="nav-number"></span> <span class="nav-text">创建Github账户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接到Github"><span class="nav-number"></span> <span class="nav-text">链接到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number"></span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化blog文件夹"><span class="nav-number"></span> <span class="nav-text">初始化blog文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo插件"><span class="nav-number"></span> <span class="nav-text">安装Hexo插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看效果"><span class="nav-number"></span> <span class="nav-text">本地查看效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number"></span> <span class="nav-text">主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启用该主题"><span class="nav-number"></span> <span class="nav-text">启用该主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新"><span class="nav-number"></span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多主题"><span class="nav-number"></span> <span class="nav-text">更多主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看调试"><span class="nav-number"></span> <span class="nav-text">本地查看调试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同步到Github<!-more->"><span class="nav-number"></span> <span class="nav-text">同步到Github</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"> </span></a></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
