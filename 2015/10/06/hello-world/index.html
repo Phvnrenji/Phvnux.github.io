@@ -1,11 +1,16 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+
+
+
   
 
-<meta charset="UTF-8"/>
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -18,27 +23,65 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
-
-
-    <meta name="description" content="blog station" />
-
-
-
-  <meta name="keywords" content="Github,babun,hexo,start," />
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Phvn's Notes" type="application/atom+xml" />
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="start,Github,hexo,babun," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
 
 
 <meta name="description" content="Start博客建立记录主要参考@wsgzao和@CnFeat的教程
@@ -67,7 +110,7 @@
 访问 Github注册
 注册好之后，在网页上直接创建一个新的repository，name与用户名一致，如Phvnux.github.io
 创建好之后，便拥">
-<meta property="og:updated_time" content="2015-10-08T04:58:43.842Z">
+<meta property="og:updated_time" content="2015-10-08T04:58:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Start博客建立记录主要参考@wsgzao和@CnFeat的教程
@@ -83,10 +126,18 @@
 创建好之后，便拥">
 
 
+
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'hide'
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -95,33 +146,38 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-next-logo"></i>
-      </span>
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
       <span class="site-title">Phvn's Notes</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Dvnean</p>
+</div>
 
 <div class="site-nav-toggle">
   <button>
@@ -135,12 +191,14 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -148,15 +206,29 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
             分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             归档
           </a>
         </li>
@@ -164,13 +236,35 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -178,11 +272,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -204,109 +296,149 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
 
+  
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              Hello World
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-06T00:00:00+09:00" content="2015-10-06">
-            2015-10-06
-          </time>
-        </span>
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h1 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/git/" itemprop="url" rel="index">
-                  <span itemprop="name">git</span>
-                </a>
-              </span>
-
-              
-              
-
             
+              
+                Hello World
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-10-06T00:00:00+09:00" content="2015-10-06">
+              2015-10-06
+            </time>
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
+            <span class="post-category" >
               &nbsp; | &nbsp;
-              <a href="/2015/10/06/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/06/hello-world/" itemprop="commentsCount"></span>
-              </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
             </span>
           
-        
-      </div>
-    </header>
 
-    <div class="post-body">
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/10/06/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/06/hello-world/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><h5 id="Start">Start</h5><h5 id="博客建立记录">博客建立记录</h5><h5 id="主要参考@wsgzao和@CnFeat的教程">主要参考<a href="http://wsgzao.github.io/post/hexo-jacman/" target="_blank" rel="external">@wsgzao</a>和<a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">@CnFeat</a>的教程</h5><p><br></p>
-<h3 id="准备工作">准备工作</h3><hr>
+        <h5 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h5><h5 id="博客建立记录"><a href="#博客建立记录" class="headerlink" title="博客建立记录"></a>博客建立记录</h5><h5 id="主要参考-wsgzao和-CnFeat的教程"><a href="#主要参考-wsgzao和-CnFeat的教程" class="headerlink" title="主要参考@wsgzao和@CnFeat的教程"></a>主要参考<a href="http://wsgzao.github.io/post/hexo-jacman/" target="_blank" rel="external">@wsgzao</a>和<a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">@CnFeat</a>的教程</h5><p><br></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><hr>
 <ol>
 <li>安装Node.js</li>
 <li>安装Git</li>
 </ol>
 <p>由于网络原因<a href="http://github-for-windows.en.softonic.com/" target="_blank" rel="external">Github for Windows</a>一直安装失败，所以我改用<a href="http://babun.github.io/" target="_blank" rel="external">Babun</a>来代替git shell</p>
-<h3 id="创建Github账户">创建Github账户</h3><hr>
+<h3 id="创建Github账户"><a href="#创建Github账户" class="headerlink" title="创建Github账户"></a>创建Github账户</h3><hr>
 <p>访问 <a href="http://github.com" target="_blank" rel="external">Github</a>注册</p>
 <p>注册好之后，在网页上直接创建一个新的repository，name与用户名一致，如<em>Phvnux.github.io</em></p>
 <p>创建好之后，便拥有了一个免费的静态主页<em><a href="http://phvnux.github.io">http://phvnux.github.io</a></em></p>
-<h3 id="链接到Github">链接到Github</h3><hr>
+<h3 id="链接到Github"><a href="#链接到Github" class="headerlink" title="链接到Github"></a>链接到Github</h3><hr>
 <p>Git会根据用户的名字和邮箱来做权限的处理，在babun中输入下面的命令进行个人git信息的设置，其中<em>username</em>和<em>email</em>为注册Github账户时的用户名和邮箱</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>   </span><br><span class="line">$ git config --global user.email <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>设置完之后可以通过下面的命令来查看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list</span><br></pre></td></tr></table></figure>
-<h3 id="安装Hexo">安装Hexo</h3><hr>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> </span><br><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo --save</span><br></pre></td></tr></table></figure>
-<h4 id="初始化blog文件夹">初始化blog文件夹</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir &lt;folder&gt;</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line"></span><br><span class="line"><span class="comment">#初始化完成后，该指定文件夹的目录如下</span></span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|      ├── _drafts</span><br><span class="line">|      └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<h4 id="安装Hexo插件">安装Hexo插件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-archive --save</span><br><span class="line">$ npm install hexo-generator-category --save</span><br><span class="line">$ npm install hexo-generator-tag --save</span><br><span class="line">$ npm install hexo-server --save</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ npm install hexo-deployer-heroku --save</span><br><span class="line">$ npm install hexo-deployer-rsync --save</span><br><span class="line">$ npm install hexo-deployer-openshift --save</span><br><span class="line">$ npm install hexo-renderer-marked@<span class="number">0.2</span> --save</span><br><span class="line">$ npm install hexo-renderer-stylus@<span class="number">0.2</span> --save</span><br><span class="line">$ npm install hexo-generator-feed@<span class="number">1</span> --save</span><br><span class="line">$ npm install hexo-generator-sitemap@<span class="number">1</span> --save</span><br></pre></td></tr></table></figure>
+<h4 id="初始化blog文件夹"><a href="#初始化blog文件夹" class="headerlink" title="初始化blog文件夹"></a>初始化blog文件夹</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir &lt;folder&gt;</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line"></span><br><span class="line"><span class="comment">#初始化完成后，该指定文件夹的目录如下</span></span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|      ├── _drafts</span><br><span class="line">|      └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<h4 id="安装Hexo插件"><a href="#安装Hexo插件" class="headerlink" title="安装Hexo插件"></a>安装Hexo插件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-archive --save</span><br><span class="line">$ npm install hexo-generator-category --save</span><br><span class="line">$ npm install hexo-generator-tag --save</span><br><span class="line">$ npm install hexo-server --save</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ npm install hexo-deployer-heroku --save</span><br><span class="line">$ npm install hexo-deployer-rsync --save</span><br><span class="line">$ npm install hexo-deployer-openshift --save</span><br><span class="line">$ npm install hexo-renderer-marked@0.2 --save</span><br><span class="line">$ npm install hexo-renderer-stylus@0.2 --save</span><br><span class="line">$ npm install hexo-generator-feed@1 --save</span><br><span class="line">$ npm install hexo-generator-sitemap@1 --save</span><br></pre></td></tr></table></figure>
 <p><br><br>More info: <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a><br><br></p>
-<h4 id="本地查看效果">本地查看效果</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
+<h4 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
 <p>在浏览器中输入<code>localhost:4000</code>查看静态网页<!--more--></p>
-<h3 id="主题">主题</h3><p>使用以下命令来复制jacman主题</p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>使用以下命令来复制jacman主题</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span>  https://github.com/wuchong/jacman.git themes/jacman</span><br></pre></td></tr></table></figure>
-<h4 id="启用该主题">启用该主题</h4><p>修改Hexo文件夹或者你的博客根目录下的<code>_config.yml</code>全局配置文件中的theme属性，将其设置为jacman。同时建议设置stylus属性中的compress值为true，会自动压缩 CSS 文件，hexo默认配置中不包含这一项，建议开启</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">theme:</span> jacman</span><br><span class="line"><span class="string">stylus:</span></span><br><span class="line"><span class="label">  compress:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h4 id="更新">更新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/jacman</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+<h4 id="启用该主题"><a href="#启用该主题" class="headerlink" title="启用该主题"></a>启用该主题</h4><p>修改Hexo文件夹或者你的博客根目录下的<code>_config.yml</code>全局配置文件中的theme属性，将其设置为jacman。同时建议设置stylus属性中的compress值为true，会自动压缩 CSS 文件，hexo默认配置中不包含这一项，建议开启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">theme: jacman</span><br><span class="line">stylus:</span><br><span class="line">  compress: true</span><br></pre></td></tr></table></figure>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/jacman</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
 <p>配置<code>_config.yml</code>文件时，建议先备份</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp _config.yml _config.yml_bak</span><br></pre></td></tr></table></figure>
-<h4 id="更多主题">更多主题</h4><p><a href="https://hexo.io/themes/" target="_blank" rel="external">Themes</a><br><a href="http://notes.iissnan.com/" target="_blank" rel="external">Next</a><br><a href="http://litten.github.io/" target="_blank" rel="external">Litten</a></p>
-<h4 id="本地查看调试">本地查看调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
-<h4 id="同步到Github<!-more->">同步到Github<!--more--></h4><p>将根文件夹下<code>generate</code>生成的<code>public</code>文件夹下的内容加入repository中，即在Github网页中创建的第一个仓库，替换掉原来的<code>index.html</code>等文件</p>
+<h4 id="更多主题"><a href="#更多主题" class="headerlink" title="更多主题"></a>更多主题</h4><p><a href="https://hexo.io/themes/" target="_blank" rel="external">Themes</a><br><a href="http://notes.iissnan.com/" target="_blank" rel="external">Next</a><br><a href="http://litten.github.io/" target="_blank" rel="external">Litten</a></p>
+<h4 id="本地查看调试"><a href="#本地查看调试" class="headerlink" title="本地查看调试"></a>本地查看调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g <span class="comment">#generate</span></span><br><span class="line">$ hexo s <span class="comment">#server</span></span><br></pre></td></tr></table></figure>
+<h4 id="同步到Github"><a href="#同步到Github" class="headerlink" title="同步到Github"></a>同步到Github<!--more--></h4><p>将根文件夹下<code>generate</code>生成的<code>public</code>文件夹下的内容加入repository中，即在Github网页中创建的第一个仓库，替换掉原来的<code>index.html</code>等文件</p>
 <p>具体操作如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> f:/Dvnean/Github/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/Phvnux/Phvnux.github.io.git</span><br><span class="line">$ git branch branchOne    <span class="comment">#可不用创建分支</span></span><br><span class="line">$ git checkout branchOne</span><br><span class="line">$ git add &lt;files&gt; </span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line"><span class="comment">#&lt;files&gt;为public中移植过来的文件</span></span><br><span class="line"><span class="comment">#具体提交哪些文件可用命令*git status*查看有变动的文件 </span></span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line">$ git commit -m <span class="string">'备注'</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge branchOne</span><br><span class="line">$ git branch <span class="operator">-d</span> branchOne </span><br><span class="line">$ git push origin master   <span class="comment">#同步远程版本库</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> f:/Dvnean/Github/</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/Phvnux/Phvnux.github.io.git</span><br><span class="line">$ git branch branchOne    <span class="comment">#可不用创建分支</span></span><br><span class="line">$ git checkout branchOne</span><br><span class="line">$ git add &lt;files&gt; </span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line"><span class="comment">#&lt;files&gt;为public中移植过来的文件</span></span><br><span class="line"><span class="comment">#具体提交哪些文件可用命令*git status*查看有变动的文件 </span></span><br><span class="line"><span class="comment">#=================================================</span></span><br><span class="line">$ git commit -m <span class="string">'备注'</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge branchOne</span><br><span class="line">$ git branch <span class="_">-d</span> branchOne </span><br><span class="line">$ git push origin master   <span class="comment">#同步远程版本库</span></span><br></pre></td></tr></table></figure>
 <p><code>push</code>之后原来的博客界面就变成刚刚设置的主题的样式了<!--more--></p>
-<h2 id=""> <br></h2><p>待续…</p>
-</span>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> <br></h2><p>待续…</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
       
     </div>
 
@@ -314,26 +446,28 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Github/" rel="tag">#Github</a>
+            <a href="/tags/start/" rel="tag">#start</a>
           
-            <a href="/tags/babun/" rel="tag">#babun</a>
+            <a href="/tags/Github/" rel="tag">#Github</a>
           
             <a href="/tags/hexo/" rel="tag">#hexo</a>
           
-            <a href="/tags/start/" rel="tag">#start</a>
+            <a href="/tags/babun/" rel="tag">#babun</a>
           
         </div>
       
 
       
         <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/10/08/pictureTest/" rel="prev">PicInHarbin</a>
+          <div class="post-nav-next post-nav-item">
             
           </div>
 
-          <div class="post-nav-next post-nav-item">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/08/pictureTest/" rel="prev" title="PicInHarbin">
+                PicInHarbin <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -370,22 +504,24 @@
     </div>
   </div>
 
- </div>
 
-        
-
-        
-          <div class="comments" id="comments">
-            
-              <div class="ds-thread" data-thread-key="2015/10/06/hello-world/"
-                   data-title="Hello World" data-url="http://Phvnux.github.io/2015/10/06/hello-world/">
-              </div>
-            
           </div>
-        
-      </div>
+          
 
-      
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/10/06/hello-world/"
+           data-title="Hello World" data-url="http://Phvnux.github.io/2015/10/06/hello-world/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -399,6 +535,8 @@
     <div class="sidebar-inner">
 
       
+
+      
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             文章目录
@@ -409,12 +547,14 @@
         </ul>
       
 
-      <section class="site-overview">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/uploads/avatar.jpg" alt="Dvnean" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Dvnean" />
           <p class="site-author-name" itemprop="name">Dvnean</p>
+          <p class="site-description motion-element" itemprop="description">blog station</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">blog station</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -423,40 +563,47 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="menu-item-icon icon-next-feed"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/Phvnux" target="_blank">GitHub</a>
+                <a href="https://github.com/Phvnux" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/u/2355935001" target="_blank">Weibo</a>
+                <a href="http://weibo.com/u/2355935001/home?wvr=5&lf=reg" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
               </span>
             
           
@@ -471,22 +618,21 @@
           </div>
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
 
       </section>
 
       
-        <section class="post-toc-wrap sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
             
+              
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Start"><span class="nav-number">1.</span> <span class="nav-text">Start</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博客建立记录"><span class="nav-number">2.</span> <span class="nav-text">博客建立记录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主要参考@wsgzao和@CnFeat的教程"><span class="nav-number">3.</span> <span class="nav-text">主要参考@wsgzao和@CnFeat的教程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number"></span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Github账户"><span class="nav-number"></span> <span class="nav-text">创建Github账户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接到Github"><span class="nav-number"></span> <span class="nav-text">链接到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number"></span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化blog文件夹"><span class="nav-number"></span> <span class="nav-text">初始化blog文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo插件"><span class="nav-number"></span> <span class="nav-text">安装Hexo插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看效果"><span class="nav-number"></span> <span class="nav-text">本地查看效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number"></span> <span class="nav-text">主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启用该主题"><span class="nav-number"></span> <span class="nav-text">启用该主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新"><span class="nav-number"></span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多主题"><span class="nav-number"></span> <span class="nav-text">更多主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看调试"><span class="nav-number"></span> <span class="nav-text">本地查看调试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同步到Github<!-more->"><span class="nav-number"></span> <span class="nav-text">同步到Github</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"> </span></a></div>
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Start"><span class="nav-number">1.</span> <span class="nav-text">Start</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博客建立记录"><span class="nav-number">2.</span> <span class="nav-text">博客建立记录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主要参考-wsgzao和-CnFeat的教程"><span class="nav-number">3.</span> <span class="nav-text">主要参考@wsgzao和@CnFeat的教程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number"></span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Github账户"><span class="nav-number"></span> <span class="nav-text">创建Github账户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接到Github"><span class="nav-number"></span> <span class="nav-text">链接到Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number"></span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化blog文件夹"><span class="nav-number"></span> <span class="nav-text">初始化blog文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo插件"><span class="nav-number"></span> <span class="nav-text">安装Hexo插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看效果"><span class="nav-number"></span> <span class="nav-text">本地查看效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number"></span> <span class="nav-text">主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启用该主题"><span class="nav-number"></span> <span class="nav-text">启用该主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新"><span class="nav-number"></span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多主题"><span class="nav-number"></span> <span class="nav-text">更多主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看调试"><span class="nav-number"></span> <span class="nav-text">本地查看调试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同步到Github"><span class="nav-number"></span> <span class="nav-text">同步到Github</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"> </span></a></div>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
         </section>
       
 
@@ -494,15 +640,18 @@
   </aside>
 
 
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
-  &copy; &nbsp; 
-  <span itemprop="copyrightYear">2015</span>
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Dvnean</span>
 </div>
@@ -514,23 +663,86 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+        
 
- </div>
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
   
   
-    
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -541,222 +753,30 @@
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
       ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+
+  
     
-     
-
-    
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
   
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
-    if (isDesktop() && CONFIG.sidebar === 'post') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        displaySidebar();
-      }
-    }
-  });
-</script>
-
-
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-      if (isMobile()) {
-        FastClick.attach(document.body);
-      }
-    });
-  </script>
 
   
-
   
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
+
+  
+
 </body>
 </html>
