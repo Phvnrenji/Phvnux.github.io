@@ -1,0 +1,764 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="C++,数据结构,排序算法," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="开通博客以来都没什么动静从现在开始把平常学的做的东西记录下来…
+
+单链表
+构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。结构体定义：
+1234typedef struct Node &amp;#123;    DataType data;	struct Node *next;&amp;#125;SLNode;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单链表排序">
+<meta property="og:url" content="http://Phvnux.github.io/2016/06/03/node/index.html">
+<meta property="og:site_name" content="Phvn's Notes">
+<meta property="og:description" content="开通博客以来都没什么动静从现在开始把平常学的做的东西记录下来…
+
+单链表
+构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。结构体定义：
+1234typedef struct Node &amp;#123;    DataType data;	struct Node *next;&amp;#125;SLNode;">
+<meta property="og:image" content="http://Phvnux.github.io/images/单链表结点.png">
+<meta property="og:image" content="http://Phvnux.github.io/images/Node.png">
+<meta property="og:image" content="http://Phvnux.github.io/images/10.PNG">
+<meta property="og:image" content="http://Phvnux.github.io/images/1000.PNG">
+<meta property="og:image" content="http://Phvnux.github.io/images/10000.PNG">
+<meta property="og:image" content="http://Phvnux.github.io/images/100000.PNG">
+<meta property="og:updated_time" content="2016-06-03T06:36:06.682Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="单链表排序">
+<meta name="twitter:description" content="开通博客以来都没什么动静从现在开始把平常学的做的东西记录下来…
+
+单链表
+构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。结构体定义：
+1234typedef struct Node &amp;#123;    DataType data;	struct Node *next;&amp;#125;SLNode;">
+<meta name="twitter:image" content="http://Phvnux.github.io/images/单链表结点.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 单链表排序 | Phvn's Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Phvn's Notes</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Dvnean</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'zZsWbJSL6-U7qotrd8Eb','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                单链表排序
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-03T00:00:00+09:00" content="2016-06-03">
+              2016-06-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/03/node/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/03/node/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>开通博客以来都没什么动静<br>从现在开始把平常学的做的东西记录下来…</p>
+<hr>
+<h2 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h2><hr>
+<p>构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。<br>结构体定义：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> Node &#123;</span><br><span class="line">    DataType data;</span><br><span class="line">	<span class="keyword">struct</span> Node *next;</span><br><span class="line">&#125;SLNode;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/单链表结点.png"></p>
+<a id="more"></a>
+<p>由以上结点结构就可以构成一个单链表了。根据单链表带不带头结点，对其进行插入结点操作和对头指针的设计都会有所区别：带头结点单链表无论在第一个数据元素结点前插入，还是在其他结点前插入，操作方法一样；而不带头结点单链表在第一个数据元素结点前插入，和在其他结点前插入，操作方法不一样。设计带头结点单链表的算法时，头指针参数可设计成输入型参数；设计不带头结点单链表的算法时，头指针参数必须设计成输出型参数。因此，带头结点单链表的算法设计简单。</p>
+<p>根据实验要求，这里用该结构体设计带头结点的单链表，在链表的首元结点之前附设的一个结点，其数据域内只放空表标志和表长等信息。如下图所示。</p>
+<p><img src="/images/Node.png"></p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><hr>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><ol>
+<li>设计一个带头结点的单链表，并随机生成一组序列，存入该单链表中。</li>
+<li>针对上一步生成的单链表，编写算法，将其中的数据元素按照值递增的顺序进行就地排序（就地排序：在不改变原有结点数据域中的值、不再申请新结点空间的情况下完成排序）。</li>
+</ol>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h4 id="函数定义："><a href="#函数定义：" class="headerlink" title="函数定义："></a>函数定义：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sequen_two</span><span class="params">(SLNode *head, <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">    	SLNode *shift, *min_pos, *current, *prev;</span><br><span class="line">		current = min_pos = head-&gt;next;</span><br><span class="line">		shift = min_pos-&gt;next;</span><br><span class="line">		prev = head;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; size; ++i ) &#123;</span><br><span class="line">		</span><br><span class="line">			<span class="keyword">if</span> (min_pos-&gt;data &gt; shift-&gt;data) &#123;</span><br><span class="line">				min_pos = shift;</span><br><span class="line">				prev = current;</span><br><span class="line">			&#125;</span><br><span class="line">			shift = shift-&gt;next;</span><br><span class="line">			current = current-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		prev-&gt;next = min_pos-&gt;next;</span><br><span class="line">		min_pos-&gt;next = head-&gt;next;</span><br><span class="line">		head-&gt;next = min_pos;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (min_pos-&gt;next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">			sequen_two(min_pos, size<span class="number">-1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>算法的时间效率是算法所处理的数据个数n的函数，算法的时间效率也称作算法的时间复杂度。其定义为：T(n)=O(f(n)),当且仅当存在正常数c和n0，对所有的n(n≥ n0)满足T(n)≤c×f(n) 。</p>
+<hr>
+<h4 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h4><p>冒泡排序是通过对单链表中的元素进行两两比较，若它们的顺序错误则将它们调换位置，并通过重复地进行最后完成排序。但是由于单链表前后两个结点元素通过指针相连而不是地址连续结构特点，对每两个位置错误的结点进行交换会非常麻烦且没有效率。所以我对数组的冒泡排序方法进行了一些修改，运用指针的操作来减少一些不必要的换位操作，最后完成排序。具体的方法就是定义一个指针*min_pos来指向首元结点，然后比较该结点与下一个结点(*shift)的值，若小等于于下一个结点则该指针依旧指向原结点，而*shift指向的结点后移，再进行比较；若大于*shift指向的结点，则将*min_pos指向*shift指向的结点，*shift结点后移。最后，指针*min_pos将会指向该单链表中数值最小的一个结点。然后进行的操作就是将这个最小的结点插入到头结点的下一个结点。至此，就完成了第一个元素的“冒泡”，接下来的工作就是递归调用该函数本身直到指针*min_pos指向空时便完成了整个单链表的冒泡排序。</p>
+<p>时间复杂度分析略</p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><h4 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sequen_one</span><span class="params">(SLNode * head, <span class="keyword">int</span> residue)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    SLNode * head_s;</span><br><span class="line">	SLNode *povit, *shift, *current;	<span class="comment">//基准结点，右移结点和参照结点</span></span><br><span class="line">	<span class="keyword">int</span> left_count = <span class="number">0</span>, right_count = <span class="number">0</span>;	<span class="comment">//左右链表计数</span></span><br><span class="line">	head_s = head;</span><br><span class="line">	povit = head_s-&gt;next;</span><br><span class="line">	shift = povit-&gt;next;</span><br><span class="line">	current = povit;</span><br><span class="line">	<span class="keyword">int</span> povit_value = povit-&gt;data;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; residue; ++i) &#123;		</span><br><span class="line">		<span class="keyword">if</span> (shift-&gt;data &lt;= povit_value) &#123;	</span><br><span class="line"><span class="comment">//右移结点值小等于基准值，将该结点移动到头节点的下一个结点</span></span><br><span class="line">			current-&gt;next = shift-&gt;next;</span><br><span class="line">			shift-&gt;next = head_s-&gt;next;</span><br><span class="line">			head_s-&gt;next = shift;</span><br><span class="line">			left_count++;</span><br><span class="line">			shift = current-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;								</span><br><span class="line"><span class="comment">//右移结点大于基准值，右移结点和参照结点右移</span></span><br><span class="line">			current = shift;</span><br><span class="line">			shift = shift-&gt;next;</span><br><span class="line">			right_count++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//递归</span></span><br><span class="line">	<span class="keyword">if</span> (left_count &gt; <span class="number">1</span>) &#123;					</span><br><span class="line">		sequen_one(head_s, left_count);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (right_count &gt; <span class="number">1</span>) &#123;</span><br><span class="line">		sequen_one(povit, right_count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="算法分析-1"><a href="#算法分析-1" class="headerlink" title="算法分析"></a>算法分析</h4><p>快速排序算法是一种基于分治模式的一种排序算法，虽然其最坏情况运行时间为Θ(n^2),但其通常是用于排序的最佳实用选择，这是因为其平均性能相当好：期望的运行时间为Θ(nlgn),且Θ(nlgn)记号中隐含的常数因子很小，是一种就地排序的好选择。</p>
+<p>在本实验创建的单链表中，首先取首元结点为基准结点，其数据域中的值为基准值，然后依次将后续结点与该结点比较，若小于基准值，则将其移至头结点的下一个结点位置；若大于基准值，则该结点位置不变。进行完一遍的扫描比较之后，整个单链表就被分成了左右两个子链表，左边的子链表数值均小于基准值，而右侧子链表数值均大于基准值。然后对两个子链表继续递归调用该函数，便完成排序。在函数定义中，我同样是使用了指针的移位操作，比如定义了相对的头结点指针、基准结点指针、右移结点指针和参照结点指针等</p>
+<p>时间复杂度分析略</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>编译环境 <code>cygwin</code>, <em><code>gcc 5.3.0</code></em></p>
+<h4 id="链表长度：10"><a href="#链表长度：10" class="headerlink" title="链表长度：10"></a>链表长度：10</h4><p><img src="/images/10.PNG"></p>
+<h4 id="链表长度：1000"><a href="#链表长度：1000" class="headerlink" title="链表长度：1000"></a>链表长度：1000</h4><p><img src="/images/1000.PNG"></p>
+<h4 id="链表长度：10000"><a href="#链表长度：10000" class="headerlink" title="链表长度：10000"></a>链表长度：10000</h4><p><img src="/images/10000.PNG"></p>
+<h4 id="链表长度：100000"><a href="#链表长度：100000" class="headerlink" title="链表长度：100000"></a>链表长度：100000</h4><p><img src="/images/100000.PNG"></p>
+<hr>
+<p><strong>以上</strong></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag">#C++</a>
+          
+            <a href="/tags/数据结构/" rel="tag">#数据结构</a>
+          
+            <a href="/tags/排序算法/" rel="tag">#排序算法</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/08/pictureTest/" rel="next" title="PicInHarbin">
+                <i class="fa fa-chevron-left"></i> PicInHarbin
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/06/03/node/"
+     data-title="单链表排序"
+     data-content=""
+     data-url="http://Phvnux.github.io/2016/06/03/node/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/03/node/"
+           data-title="单链表排序" data-url="http://Phvnux.github.io/2016/06/03/node/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Dvnean" />
+          <p class="site-author-name" itemprop="name">Dvnean</p>
+          <p class="site-description motion-element" itemprop="description">blog station</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Phvnux" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2355935001/home?wvr=5&lf=reg" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单链表"><span class="nav-number">1.</span> <span class="nav-text">单链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">2.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求"><span class="nav-number">2.1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.2.</span> <span class="nav-text">冒泡排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数定义："><span class="nav-number">2.2.1.</span> <span class="nav-text">函数定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间复杂度"><span class="nav-number">2.2.2.</span> <span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法分析"><span class="nav-number">2.2.3.</span> <span class="nav-text">算法分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">2.3.</span> <span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数定义"><span class="nav-number">2.3.1.</span> <span class="nav-text">函数定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法分析-1"><span class="nav-number">2.3.2.</span> <span class="nav-text">算法分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结果"><span class="nav-number">3.</span> <span class="nav-text">结果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#链表长度：10"><span class="nav-number">3.0.1.</span> <span class="nav-text">链表长度：10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链表长度：1000"><span class="nav-number">3.0.2.</span> <span class="nav-text">链表长度：1000</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链表长度：10000"><span class="nav-number">3.0.3.</span> <span class="nav-text">链表长度：10000</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链表长度：100000"><span class="nav-number">3.0.4.</span> <span class="nav-text">链表长度：100000</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dvnean</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"phvnduoshuo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
