@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="C++,数据结构,排序算法," />
+  <meta name="keywords" content="C++,数据结构,算法,排序," />
 
 
 
@@ -88,7 +88,7 @@
 
 单链表
 构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。结构体定义：
-1234typedef struct Node &amp;#123;    DataType data;	struct Node *next;&amp;#125;SLNode;">
+1234typedef struct Node &amp;#123;        DataType data;        struct Node *next;&amp;#125;SLNode;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单链表排序">
 <meta property="og:url" content="http://Phvnux.github.io/2016/06/03/node/index.html">
@@ -97,21 +97,21 @@
 
 单链表
 构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。结构体定义：
-1234typedef struct Node &amp;#123;    DataType data;	struct Node *next;&amp;#125;SLNode;">
+1234typedef struct Node &amp;#123;        DataType data;        struct Node *next;&amp;#125;SLNode;">
 <meta property="og:image" content="http://Phvnux.github.io/images/单链表结点.png">
 <meta property="og:image" content="http://Phvnux.github.io/images/Node.png">
 <meta property="og:image" content="http://Phvnux.github.io/images/10.PNG">
 <meta property="og:image" content="http://Phvnux.github.io/images/1000.PNG">
 <meta property="og:image" content="http://Phvnux.github.io/images/10000.PNG">
 <meta property="og:image" content="http://Phvnux.github.io/images/100000.PNG">
-<meta property="og:updated_time" content="2016-06-03T06:36:06.682Z">
+<meta property="og:updated_time" content="2016-06-06T07:26:30.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单链表排序">
 <meta name="twitter:description" content="开通博客以来都没什么动静从现在开始把平常学的做的东西记录下来…
 
 单链表
 构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。结构体定义：
-1234typedef struct Node &amp;#123;    DataType data;	struct Node *next;&amp;#125;SLNode;">
+1234typedef struct Node &amp;#123;        DataType data;        struct Node *next;&amp;#125;SLNode;">
 <meta name="twitter:image" content="http://Phvnux.github.io/images/单链表结点.png">
 
 
@@ -381,7 +381,7 @@
 <hr>
 <h2 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h2><hr>
 <p>构成单链表的结点结构如下图所示，即结点由两部分构成，一是存储元素数值数据的数据域，另一部分是存储直接后继存储位置信息的指针域。<br>结构体定义：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> Node &#123;</span><br><span class="line">    DataType data;</span><br><span class="line">	<span class="keyword">struct</span> Node *next;</span><br><span class="line">&#125;SLNode;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> Node &#123;</span><br><span class="line">        DataType data;</span><br><span class="line">        <span class="keyword">struct</span> Node *next;</span><br><span class="line">&#125;SLNode;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/单链表结点.png"></p>
 <a id="more"></a>
 <p>由以上结点结构就可以构成一个单链表了。根据单链表带不带头结点，对其进行插入结点操作和对头指针的设计都会有所区别：带头结点单链表无论在第一个数据元素结点前插入，还是在其他结点前插入，操作方法一样；而不带头结点单链表在第一个数据元素结点前插入，和在其他结点前插入，操作方法不一样。设计带头结点单链表的算法时，头指针参数可设计成输入型参数；设计不带头结点单链表的算法时，头指针参数必须设计成输出型参数。因此，带头结点单链表的算法设计简单。</p>
@@ -434,7 +434,9 @@
           
             <a href="/tags/数据结构/" rel="tag">#数据结构</a>
           
-            <a href="/tags/排序算法/" rel="tag">#排序算法</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
+          
+            <a href="/tags/排序/" rel="tag">#排序</a>
           
         </div>
       
@@ -450,6 +452,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/06/matrix/" rel="prev" title="稀疏矩阵乘法">
+                稀疏矩阵乘法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -540,7 +546,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -557,7 +563,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
