@@ -77,10 +77,8 @@
 
 
 
-  <!--link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /-->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="Bookmark" href="/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
 
 
 
@@ -273,6 +271,135 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/26/vgavhdl/" itemprop="url">
+                  基于ROM的VGA显示
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-26T00:00:00+09:00" content="2016-08-26">
+              2016-08-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/FPGA/" itemprop="url" rel="index">
+                    <span itemprop="name">FPGA</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/26/vgavhdl/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/26/vgavhdl/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <pre><code>目标：
+设计VGA显示器的控制电路，使之控制显示器，完成图形的显示。即运用quartus II 创建ROM存储由图片转换后的MIF文件，通过图像显示位置与寻址
+ROM的地址信号的映射方法将图像显示出来。
+Ps.参考网上找的北航该实验指导完成，也用到一些其他帖子内容
+</code></pre><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><hr>
+<h3 id="VGA接口"><a href="#VGA接口" class="headerlink" title="VGA接口"></a>VGA接口</h3><p>VGA接口是一种D型接口（D-SUB），上面共有15针空，分成三排，每排五个。</p>
+<p><img src="/images/vgaport.png"/></p>
+<p>VGA接口共有15个引脚，但我们在实验中真正用到的只有5个引脚，引脚1、2、3、13、14。引脚1、2、3分别为红绿蓝三基色模拟电压，为0~0.714V peak-peak（峰-峰值），0V代表无色，0.714V代表满色。一些非标准显示器使用的是 1Vpp的满色电平。HSY和VSY分别为行数据同步不帧数据同步，为TTL电平。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/26/vgavhdl/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -828,7 +955,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -836,7 +963,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -845,7 +972,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
